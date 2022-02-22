@@ -1,0 +1,9 @@
+<div class="container">
+
+<% @edit = "<i class='fa-solid fa-pencil'></i>" %>
+<% @delete = "<i class='fa-solid fa-trash'></i>" %>
+<h1> <%= @article.title %> <%= link_to sanitize(@edit), edit_article_path %> <%= link_to sanitize(@delete), article_path(@article.id), method: :delete, data: { confirm: "Are you sure?" } %> </h1>
+<p> <%= @article.content %> </p>
+<%= link_to "Back to all articles", articles_path %>
+
+</div>
